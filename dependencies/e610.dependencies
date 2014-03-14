@@ -1,0 +1,26 @@
+[
+    {
+        "account":      "bart452",
+        "repository":   "android_device_lge_e610",
+        "target_path":  "device/lge/e610",
+        "revision":     "kk44"
+    },
+    {
+        "account":      "bart452",
+        "repository":   "android_device_lge_msm7x27a-common",
+        "target_path":  "device/lge/msm7x27a-common",
+        "revision":     "kk44"
+    },
+    {
+        "account":      "TeamHackLG",
+        "repository":   "lge-kernel-lproj",
+        "target_path":  "kernel/lge/msm7x27a-common",
+        "revision":     "android-msm-3.4-kk-exp"
+    },
+    {
+        "account":      "Pinky-Inky-and-Clyde",
+        "repository":   "proprietary_vendor_lge",
+        "target_path":  "vendor/lge",
+        "revision":     "cm-11.0"
+    }
+]

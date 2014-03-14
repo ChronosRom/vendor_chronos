@@ -1,0 +1,198 @@
+<devices>
+    <vendor Name="Amazon">
+        <device FullName="Kindle Fire" CodeName="otter"/>
+        <device FullName="Kindle Fire 2" CodeName="otter2"/>
+        <device FullName="Kindle Fire HD 7" CodeName="tate"/>
+        <device FullName="Kindle Fire HD 8.9" CodeName="jem"/>
+    </vendor>
+    <vendor Name="Asus">
+        <device FullName="Transformer Prime" CodeName="tf201"/>
+        <device FullName="Nexus 7" CodeName="grouper"/>
+        <device FullName="Nexus 7 3G" CodeName="tilapia"/>
+        <device FullName="Nexus 7 (2013)" CodeName="flo"/>
+        <device FullName="Nexus 7 LTE (2013)" CodeName="deb"/>
+        <device FullName="Transformer Pad" CodeName="tf300t"/>
+        <device FullName="Transformer Pad Infinity" CodeName="tf700t"/>
+    </vendor>
+    <vendor Name="Google">
+        <device FullName="Nexus Q" CodeName="steelhead"/>
+    </vendor>
+    <vendor Name="HTC">
+        <device FullName="Amaze 4G" CodeName="ruby"/>
+        <device FullName="Droid DNA" CodeName="dlx"/>
+        <device FullName="Droid Incredible 4G" CodeName="fireball"/>
+        <device FullName="Evo LTE" CodeName="jewel"/>
+        <device FullName="MyTouch 4G" CodeName="glacier"/>
+        <device FullName="One (ATT)" CodeName="m7"/>
+        <device FullName="One (GSM)" CodeName="m7"/>
+        <device FullName="One (Sprint)" CodeName="m7spr"/>
+        <device FullName="One (T-Mobile)" CodeName="m7"/>
+        <device FullName="One (Verizon)" CodeName="m7vzw"/>
+        <device FullName="One S" CodeName="ville"/>
+        <device FullName="One S C2" CodeName="villec2"/>
+        <device FullName="One X" CodeName="endeavoru"/>
+        <device FullName="One X+" CodeName="enrc2b"/>
+        <device FullName="One XL" CodeName="evita"/>
+        <device FullName="Sensation" CodeName="pyramid"/>
+    </vendor>
+    <vendor Name="Huawei">
+        <device FullName="Ascend G510" CodeName="u8951"/>
+        <device FullName="Ascend Y300" CodeName="u8833"/>
+        <device FullName="Honor" CodeName="u8860"/>
+        <device FullName="Ideos X5 PRO" CodeName="u8800pro"/>
+    </vendor>
+    <vendor Name="LG">
+        <device FullName="G-Pad" CodeName="v500"/>
+        <device FullName="Nexus 4" CodeName="mako"/>
+        <device FullName="Nitro HD" CodeName="p930"/>
+        <device FullName="Optimus 4X" CodeName="p880"/>
+        <device FullName="Optimus Black" CodeName="p970"/>
+        <device FullName="Optimus L5" CodeName="e610"/>
+        <device FullName="Optimus L9" CodeName="p760"/>
+        <device FullName="Optimus G (ATT)" CodeName="e970"/>
+        <device FullName="Optimus G (Japan)" CodeName="e973"/>
+        <device FullName="Optimus G (Europe)" CodeName="e975"/>
+        <device FullName="Optimus G (Pro)" CodeName="e980"/>
+        <device FullName="Optimus G (Sprint)" CodeName="ls970"/>
+        <device FullName="Optimus G2 (ATT)" CodeName="d800"/>
+        <device FullName="Optimus G2 (T-Mobile)" CodeName="d801"/>
+        <device FullName="Optimus G2 (GSM)" CodeName="d802"/>
+        <device FullName="Optimus G2 (Canadian)" CodeName="d803"/>
+        <device FullName="Optimus G2 (Sprint)" CodeName="ls980" />
+        <device FullName="Optimus G2 (Verizon)" CodeName="vs980"/>
+        <device FullName="Optimus One" CodeName="p500"/>
+        <device FullName="Spectrum" CodeName="vs920"/>
+    </vendor>
+    <vendor Name="Motorola">
+        <device FullName="Atrix 2" CodeName="edison"/>
+        <device FullName="Atrix HD" CodeName="moto_msm8960"/>
+        <device FullName="Droid 4" CodeName="maserati"/>
+        <device FullName="Droid Bionic" CodeName="targa"/>
+        <device FullName="Droid Razr (GSM)" CodeName="umts_spyder"/>
+        <device FullName="Droid Razr (Verizon)" CodeName="spyder"/>
+        <device FullName="Moto G (Global GSM)" CodeName="falcon"/>
+        <device FullName="Moto G (Retail US)" CodeName="falcon"/>
+        <device FullName="Moto X (GSM)" CodeName="moto_msm8960dt"/>
+        <device FullName="Moto X (Sprint)" CodeName="moto_msm8960dt"/>
+        <device FullName="Moto X (T-Mobile)" CodeName="moto_msm8960dt"/>
+        <device FullName="Moto X (US Celular)" CodeName="moto_msm8960dt"/>
+        <device FullName="Moto X (Verizon-Developer Edition)" CodeName="moto_msm8960dt"/>
+        <device FullName="Photon Q (Sprint)" CodeName="moto_msm8960"/>
+        <device FullName="Photon Q (GSM)" CodeName="moto_msm8960"/>
+        <device FullName="Razr HD (GSM)" CodeName="moto_msm8960"/>
+        <device FullName="Razr HD (Verizon)" CodeName="moto_msm8960"/>
+        <device FullName="Razr M (Verizon)" CodeName="moto_msm8960"/>
+    </vendor>
+    <vendor Name="Oppo">
+        <device FullName="Find5" CodeName="find5"/>
+        <device FullName="Find5" CodeName="n1"/>
+    </vendor>
+    <vendor Name="Samsung">
+        <device FullName="Epic 4G" CodeName="epicmtd"/>
+        <device FullName="Epic 4G Touch (Sprint)" CodeName="d710"/>
+        <device FullName="Exhilarate (ATT)" CodeName="sgh-1577"/>
+        <device FullName="Fascinate" CodeName="fascinatemtd"/>
+	    <device FullName="Galaxy Ace II" CodeName="codina"/>
+        <device FullName="Galaxy Express (ATT)" CodeName="expressatt"/>
+        <device FullName="Galaxy Mega (GSM)" CodeName="melius3gxx"/>
+        <device FullName="Galaxy Mega (LTE)" CodeName="meliusltexx"/>
+        <device FullName="Galaxy Nexus (GSM)" CodeName="maguro"/>
+        <device FullName="Galaxy Nexus (Sprint)" CodeName="toroplus"/>
+        <device FullName="Galaxy Nexus (Verizon)" CodeName="toro"/>
+        <device FullName="Galaxy Note" CodeName="n7000"/>
+        <device FullName="Galaxy Note (ATT)" CodeName="quincyatt"/>
+        <device FullName="Galaxy Note (T-Mobile)" CodeName="quincytmo"/>
+        <device FullName="Galaxy Note 2 (ATT)" CodeName="t0lteatt"/>
+        <device FullName="Galaxy Note 2 (GSM)" CodeName="n7100"/>
+        <device FullName="Galaxy Note 2 (LTE)" CodeName="t0lte"/>
+        <device FullName="Galaxy Note 2 (Sprint)" CodeName="l900"/>
+        <device FullName="Galaxy Note 2 (T-Mobile)" CodeName="t0ltetmo"/>
+        <device FullName="Galaxy Note 2 (US Cellular)" CodeName="r950"/>
+        <device FullName="Galaxy Note 2 (Verizon)" CodeName="i605"/>
+        <device FullName="Galaxy Note 3 (Sprint)" CodeName="hlte"/>
+        <device FullName="Galaxy Note 3 (T-Mobile)" CodeName="hlte"/>
+        <device FullName="Galaxy Note 3 (International)"CodeName="hlte"/>
+        <device FullName="Galaxy Note 3 (Verizon)" CodeName="hlte"/>
+        <device FullName="Galaxy Note 8.0 (GSM)" CodeName="N5100"/>
+        <device FullName="Galaxy Note 8.0 (Wi-Fi)" CodeName="N5110"/>
+        <device FullName="Galaxy Note 8.0 (LTE)" CodeName="N5120"/>
+        <device FullName="Galaxy Note 10.1 (GSM)" CodeName="N8013"/>
+        <device FullName="Galaxy Note 10.1 (Wi-Fi)" CodeName="N8000"/>
+        <device FullName="Galaxy Note 10.1 (Verizon LTE)" CodeName="i925"/>
+        <device FullName="Galaxy Player 4.0" CodeName="ypg1"/>
+        <device FullName="Galaxy Player 5.0" CodeName="venturi"/>
+        <device FullName="Galaxy Premier" CodeName="superior"/>
+	    <device FullName="Galaxy S Advance" CodeName="janice"/>
+        <device FullName="Galaxy S I" CodeName="galaxysmtd"/>
+        <device FullName="Galaxy S II" CodeName="i9100"/>
+        <device FullName="Galaxy S II G" CodeName="i9100G"/>
+        <device FullName="Galaxy S II LTE" CodeName="skyrocket"/>
+        <device FullName="Galaxy S II (T-Mobile)" CodeName="hercules"/>
+        <device FullName="Galaxy S II (ATT)" CodeName="i777"/>
+        <device FullName="Galaxy S III (ATT)" CodeName="d2lte"/>
+        <device FullName="Galaxy S III (Cricket)" CodeName="d2lte"/>
+        <device FullName="Galaxy S III (GSM)" CodeName="i9300"/>
+        <device FullName="Galaxy S III (LTE)" CodeName="i9305"/>
+        <device FullName="Galaxy S III (Metro PCS)" CodeName="d2lte"/>
+        <device FullName="Galaxy S III (Sprint)" CodeName="d2lte"/>
+        <device FullName="Galaxy S III (C-Spire)" CodeName="d2lte"/>
+        <device FullName="Galaxy S III (T-Mobile)" CodeName="d2lte"/>
+        <device FullName="Galaxy S III (T-Mobile w/ Keyboard)" CodeName="apexqtmo"/>
+        <device FullName="Galaxy S III (US Cellular)" CodeName="d2lte"/>
+        <device FullName="Galaxy S III (Verizon)" CodeName="d2lte"/>
+	    <device FullName="Galaxy S IV (GSM)" CodeName="i9500"/>
+        <device FullName="Galaxy S IV (ATT)" CodeName="jflte"/>
+        <device FullName="Galaxy S IV (Canada)" CodeName="jflte"/>
+        <device FullName="Galaxy S IV (Cricket)" CodeName="jflte"/>
+        <device FullName="Galaxy S IV (C-Spire)" CodeName="jflte"/>
+        <device FullName="Galaxy S IV (LTE)" CodeName="jflte"/>
+        <device FullName="Galaxy S IV (Sprint)" CodeName="jflte"/>
+        <device FullName="Galaxy S IV (T-Mobile)" CodeName="jflte"/>
+        <device FullName="Galaxy S IV (US Cellular)" CodeName="jflte"/>
+        <device FullName="Galaxy S IV (Verizon)" CodeName="jflte"/>
+        <device FullName="Galaxy S IV Mini (3g)" CodeName="serrano3gxx"/>
+        <device FullName="Galaxy S IV Mini (LTE)" CodeName="serranoltexx"/>
+        <device FullName="Galaxy S B" CodeName="galaxysbmtd"/>
+        <device FullName="Galaxy S Blaze 4G (T-Mobile)" CodeName="t769"/>
+        <device FullName="Galaxy S LCD" CodeName="galaxysl"/>
+        <device FullName="Galaxy Tab 7" "(GSM)" CodeName="p1"/>
+        <device FullName="Galaxy Tab 10.1 (GSM)" CodeName="p4"/>
+        <device FullName="Galaxy Tab 10.1 (WiFi)" CodeName="p4wifi"/>
+        <device FullName="Galaxy Tab 10" CodeName="p7100"/>
+        <device FullName="Galaxy Tab 2 7" CodeName="p3100/P3110"/>
+        <device FullName="Galaxy Tab 2 10" CodeName="p5100/P5110"/>
+        <device FullName="Galaxy W" CodeName="i8150"/>
+        <device FullName="Mesmerize" CodeName="mesmerizemtd"/>
+        <device FullName="Nexus S" CodeName="crespo"/>
+        <device FullName="Nexus 10" CodeName="manta"/>
+        <device FullName="Showcase" CodeName="showcasemtd"/>
+    </vendor>
+    <vendor Name="Sony">
+        <device FullName="Xperia T" CodeName="mint"/>
+        <device FullName="Xperia v" CodeName="tsubasa"/>
+        <device FullName="Xperia Tablet Z" CodeName="pollux"/>
+        <device FullName="Xperia Tablet Z LTE" CodeName="pollux_windy"/>
+        <device FullName="Xperia Z" CodeName="yuga"/>
+        <device FullName="Xperia Z1" CodeName="honami"/>
+        <device FullName="Xperia ZL" CodeName="odin"/>
+        <device FullName="Xperia Z Ultra" CodeName="togari"/>
+        <device FullName="Xperia Z Ultra GPE" CodeName="togari_gpe"/>
+    </vendor>
+    <vendor Name="Sony (Legacy)">
+        <device FullName="Live With Walkman" CodeName="coconut"/>
+        <device FullName="Xperia Active" CodeName="satsuma"/>
+        <device FullName="Xperia Arc" CodeName="anzu"/>
+        <device FullName="Xperia Mini" CodeName="smultron"/>
+        <device FullName="Xperia Mini Pro" CodeName="mango"/>
+        <device FullName="Xperia Neo" CodeName="hallon"/>
+        <device FullName="Xperia Neo V" CodeName="haida"/>
+        <device FullName="Xperia Pro" CodeName="iyokan"/>
+        <device FullName="Xperia Ray" CodeName="urushi"/>
+    </vendor>
+    <vendor Name="Xiaomi">
+        <device FullName="MI 2" CodeName="aries"/>
+    </vendor>
+    <vendor Name="ZTE">
+        <device FullName="Blade 3" CodeName="atlas40"/>
+    </vendor>
+</devices>
