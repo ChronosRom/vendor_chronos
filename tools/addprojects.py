@@ -102,7 +102,7 @@ def add_to_manifest(repositories):
 
 def fetch_extras(def_file):
     print 'Looking for add projects entries'
-    projects_path = 'vendor/ioap/manifest/' + def_file
+    projects_path = 'vendor/chronos/manifest/' + def_file
 
     syncable_repos = []
 

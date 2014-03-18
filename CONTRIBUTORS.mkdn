@@ -1,9 +1,9 @@
-IOAP Rom
+Chronos Rom
 ===========
 
 
 Developers:
 ----------------
-* __mrimp__
-* __Jamison904__
+* __Team infamous__
+* __Octane70__
 

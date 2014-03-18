@@ -4,7 +4,7 @@
 # cyanogen
 #
 
-. ${ANDROID_BUILD_TOP}/vendor/ioap/tools/colors
+. ${ANDROID_BUILD_TOP}/vendor/chronos/tools/colors
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
 if [ -z "$OUT_TARGET_HOST" ]
@@ -37,7 +37,7 @@ if [ ! -f "$OTAPACKAGE" ]; then
     exit 1
 fi
 
-OPTICHARGER=$ANDROID_BUILD_TOP/vendor/ioap/tools/opticharger
+OPTICHARGER=$ANDROID_BUILD_TOP/vendor/chronos/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 
@@ -68,16 +68,16 @@ $SED -i \
     -e '/ro\.build\.type/s/eng/user/' \
     $REPACK/ota/system/build.prop
 
-# Delete IOAP specific files
-if [ -f $ANDROID_BUILD_TOP/vendor/ioap/tools/squisher.rm ]; then
-	for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/ioap/tools/squisher.rm`; do
+# Delete Chronos specific files
+if [ -f $ANDROID_BUILD_TOP/vendor/chronos/tools/squisher.rm ]; then
+	for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/chronos/tools/squisher.rm`; do
 		rm -f $REPACK/ota/$RM_FILE
 	done
 fi
 
 # Delete target product specific files
-if [ -f $ANDROID_BUILD_TOP/vendor/ioap/tools/$TARGET_PRODUCT-squisher.rm ]; then
-	for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/ioap/tools/$TARGET_PRODUCT-squisher.rm`; do
+if [ -f $ANDROID_BUILD_TOP/vendor/chronos/tools/$TARGET_PRODUCT-squisher.rm ]; then
+	for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/chronos/tools/$TARGET_PRODUCT-squisher.rm`; do
 		rm -f $REPACK/ota/$RM_FILE
 	done
 fi
@@ -94,26 +94,26 @@ rm -rf $REPACK/ota/recovery
 
 # Determine what to name the new signed package
 if [ -z "$CYANOGEN_NIGHTLY" ]; then
-    IOAPVERSION=`grep 'ro.infamous.version=' $REPACK/ota/system/build.prop | sed -e 's/ro.infamous.version=//g'`
+    CHRONOSVERSION=`grep 'ro.infamous.version=' $REPACK/ota/system/build.prop | sed -e 's/ro.infamous.version=//g'`
     ABIGEN=`grep 'ro.product.cpu.abi=' $REPACK/ota/system/build.prop | sed -e 's/ro.product.cpu.abi=//g'`
-    OUTFILE=$OUT/$IOAPVERSION.zip
-    echo -e ""; echo -e "${bldylw}IOAP-VERSION${txtrst}:${cya} $IOAPVERSION"${txtrst}; echo -e ""
+    OUTFILE=$OUT/$CHRONOSVERSION.zip
+    echo -e ""; echo -e "${bldylw}CHRONOS-VERSION${txtrst}:${cya} $CHRONOSVERSION"${txtrst}; echo -e ""
 else
     OUTFILE=$OUT/update-squished.zip
 fi
 
 if [ -n $ABIGEN ]; then
     echo ${cya}"Packing in Pre-Built Libs for CPU Variant:${ylw}$ABIGEN"${txtrst}
-    cp ${ANDROID_BUILD_TOP}/vendor/ioap/prebuilt/libs/$ABIGEN/libbypass.so $REPACK/ota/system/lib/libbypass.so
+    cp ${ANDROID_BUILD_TOP}/vendor/chronos/prebuilt/libs/$ABIGEN/libbypass.so $REPACK/ota/system/lib/libbypass.so
     echo ""
 fi
 
-if [ "$TARGET_PRODUCT" = "ioap_hammerhead" ]; then
-    cp ${ANDROID_BUILD_TOP}/vendor/ioap/prebuilt/common/etc/audio_effects_hammerhead.conf $REPACK/ota/system/vendor/etc/audio_effects.conf
-elif [ "$TARGET_PRODUCT" = "ioap_flo" ]; then
-    cp ${ANDROID_BUILD_TOP}/vendor/ioap/prebuilt/common/etc/audio_effects_flo.conf $REPACK/ota/system/vendor/etc/audio_effects.conf
-elif [ "$TARGET_PRODUCT" = "ioap_mako" ]; then
-    cp ${ANDROID_BUILD_TOP}/vendor/ioap/prebuilt/common/etc/audio_effects_mako.conf $REPACK/ota/system/vendor/etc/audio_effects.conf
+if [ "$TARGET_PRODUCT" = "chronos_hammerhead" ]; then
+    cp ${ANDROID_BUILD_TOP}/vendor/chronos/prebuilt/common/etc/audio_effects_hammerhead.conf $REPACK/ota/system/vendor/etc/audio_effects.conf
+elif [ "$TARGET_PRODUCT" = "chronos_flo" ]; then
+    cp ${ANDROID_BUILD_TOP}/vendor/chronos/prebuilt/common/etc/audio_effects_flo.conf $REPACK/ota/system/vendor/etc/audio_effects.conf
+elif [ "$TARGET_PRODUCT" = "chronos_mako" ]; then
+    cp ${ANDROID_BUILD_TOP}/vendor/chronos/prebuilt/common/etc/audio_effects_mako.conf $REPACK/ota/system/vendor/etc/audio_effects.conf
 else
     cp ${ANDROID_BUILD_TOP}/packages/apps/DSPManager/cyanogen-dsp/audio_effects.conf $REPACK/ota/system/vendor/etc/audio_effects.conf
 fi
@@ -138,20 +138,14 @@ $MD5 $img >$img.md5sum
 ZIPSIZE=`ls -lah $OUTFILE | awk '{ print $5}'`
 
 # Logo
-echo -e ${bldylw}"                                                              "${txtrst}
-echo -e ${bldylw}"        .___        _____                                     "${txtrst}
-echo -e ${bldylw}"        |   | _____/ ____\____    _____   ____  __ __  ______ "${txtrst}
-echo -e ${bldylw}"        |   |/    \   __ \\__  \  /     \ /  _ \|  |  \/  ___/"${txtrst}
-echo -e ${bldylw}"        |   |   |  \  |   / __ \|  Y Y  (  <_> )  |  /\___ \  "${txtrst}
-echo -e ${bldylw}"        |___|___|  /__|  (____  /__|_|  /\____/|____//____  > "${txtrst}
-echo -e ${bldylw}"                 \/           \/      \/                  \/  "${txtrst}
-echo -e ${bldylw}"                                                              "${txtrst}
-echo -e ${bldylw}"                  .___________      _____ __________          "${txtrst}
-echo -e ${bldylw}"                  |   \_____  \    /  _  \\______   \         "${txtrst}
-echo -e ${bldylw}"                  |   |/   |   \  /  /_\  \|     ___/         "${txtrst}
-echo -e ${bldylw}"                  |   /    |    \/    |    \    |             "${txtrst}
-echo -e ${bldylw}"                  |___\_______  /\____|__  /____|             "${txtrst}
-echo -e ${bldylw}"                              \/         \/                   "${txtrst}
+echo -e ${bldylw}"              Infamous Development            "${txtrst}
+echo -e ${bldylw}"      ___ _                                   "${txtrst}
+echo -e ${bldylw}"     / __\ |__  _ __ ___  _ __   ___  ___     "${txtrst}
+echo -e ${bldylw}"    / /  | '_ \| '__/ _ \| '_ \ / _ \/ __|    "${txtrst}
+echo -e ${bldylw}"   / /___| | | | | | (_) | | | | (_) \__ \    "${txtrst}
+echo -e ${bldylw}"   \____/|_| |_|_|  \___/|_| |_|\___/|___/    "${txtrst}
+echo -e ${bldylw}"                                              "${txtrst}                                                                   
+echo -e ${bldylw}"            ChronosRom Kitkat Edition         "${txtrst}
 
 echo -e ""; echo -e ${bldgrn}"Package complete:"${txtrst}
 echo -e ${cya}"ZIP:${ylw}  $img"${txtrst}

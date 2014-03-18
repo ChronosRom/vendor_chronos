@@ -5,4 +5,4 @@ PRODUCT_PACKAGES += \
     ThemeChooser
 
 PRODUCT_COPY_FILES += \
-    vendor/ioap/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
+    vendor/chronos/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
