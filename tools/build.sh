@@ -26,14 +26,14 @@ usage()
 }
 
 # colors
-. ./vendor/ioap/tools/colors
+. ./vendor/chronos/tools/colors
 
 if [ ! -d ".repo" ]; then
     echo -e ${red}"No .repo directory found.  Is this an Android build tree?"${txtrst}
     exit 1
 fi
-if [ ! -d "vendor/ioap" ]; then
-    echo -e ${red}"No vendor/ioap directory found.  Is this an IOAP build tree?"${txtrst}
+if [ ! -d "vendor/chronos" ]; then
+    echo -e ${red}"No vendor/chronos directory found.  Is this an Chronos build tree?"${txtrst}
     exit 1
 fi
 
@@ -80,20 +80,14 @@ fi
 export USE_CCACHE=1
 
 # Logo
-echo -e ${bldylw}"                                                              "${txtrst}
-echo -e ${bldylw}"        .___        _____                                     "${txtrst}
-echo -e ${bldylw}"        |   | _____/ ____\____    _____   ____  __ __  ______ "${txtrst}
-echo -e ${bldylw}"        |   |/    \   __ \\__  \  /     \ /  _ \|  |  \/  ___/"${txtrst}
-echo -e ${bldylw}"        |   |   |  \  |   / __ \|  Y Y  (  <_> )  |  /\___ \  "${txtrst}
-echo -e ${bldylw}"        |___|___|  /__|  (____  /__|_|  /\____/|____//____  > "${txtrst}
-echo -e ${bldylw}"                 \/           \/      \/                  \/  "${txtrst}
-echo -e ${bldylw}"                                                              "${txtrst}
-echo -e ${bldylw}"                  .___________      _____ __________          "${txtrst}
-echo -e ${bldylw}"                  |   \_____  \    /  _  \\______   \         "${txtrst}
-echo -e ${bldylw}"                  |   |/   |   \  /  /_\  \|     ___/         "${txtrst}
-echo -e ${bldylw}"                  |   /    |    \/    |    \    |             "${txtrst}
-echo -e ${bldylw}"                  |___\_______  /\____|__  /____|             "${txtrst}
-echo -e ${bldylw}"                              \/         \/                   "${txtrst}
+echo -e ${bldylw}"              Infamous Development            "${txtrst}
+echo -e ${bldylw}"      ___ _                                   "${txtrst}
+echo -e ${bldylw}"     / __\ |__  _ __ ___  _ __   ___  ___     "${txtrst}
+echo -e ${bldylw}"    / /  | '_ \| '__/ _ \| '_ \ / _ \/ __|    "${txtrst}
+echo -e ${bldylw}"   / /___| | | | | | (_) | | | | (_) \__ \    "${txtrst}
+echo -e ${bldylw}"   \____/|_| |_|_|  \___/|_| |_|\___/|___/    "${txtrst}
+echo -e ${bldylw}"                                              "${txtrst}                                                                   
+echo -e ${bldylw}"            ChronosRom Kitkat Edition         "${txtrst}
 
 opt_clean=0
 opt_dex=0
@@ -126,15 +120,15 @@ fi
 device="$1"
 
 # get current version
-eval $(grep "^IOAP_VERSION_" vendor/ioap/config/ioap_common.mk | sed 's/ *//g')
-VERSION="$IOAP_VERSION_MAJOR.$IOAP_VERSION_MINOR.$IOAP_VERSION_MAINTENANCE"
+eval $(grep "^CHRONOS_VERSION_" vendor/chronos/config/chronos_common.mk | sed 's/ *//g')
+VERSION="$CHRONOS_VERSION_MAJOR.$CHRONOS_VERSION_MINOR.$CHRONOS_VERSION_MAINTENANCE"
 
-echo -e ${cya}"Building ${bldylw}IOAP v$VERSION"${txtrst}
+echo -e ${cya}"Building ${bldylw}CHRONOS v$VERSION"${txtrst}
 
 # Device dependencies
 echo -e ""
 echo -e ${bldylw}"Looking for product dependencies${txtrst}"${cya}
-vendor/ioap/tools/getdependencies.py "$device"
+vendor/chronos/tools/getdependencies.py "$device"
 echo -e "${txtrst}"
 
 if [ "$opt_clean" -ne 0 ]; then
@@ -184,7 +178,7 @@ fi
 # lunch device
 echo -e ""
 echo -e ${bldblu}"Lunching device"${txtrst}
-lunch "ioap_$device-userdebug";
+lunch "chronos_$device-userdebug";
 
 echo -e ""
 echo -e ${bldblu}"Starting compilation"${txtrst}
@@ -222,11 +216,11 @@ fi
 echo -e ""
 
 # squisher
-vendor/ioap/tools/squisher
+vendor/chronos/tools/squisher
 
 # cleanup unused built
 rm -f $OUTDIR/target/product/$device/cm-*.*
-rm -f $OUTDIR/target/product/$device/ioap_*-ota*.zip
+rm -f $OUTDIR/target/product/$device/chronos_*-ota*.zip
 
 # finished? get elapsed time
 t2=$($DATE +%s)
