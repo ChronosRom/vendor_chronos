@@ -1,3 +1,3 @@
-ifneq ($(filter ioap_%,$(TARGET_PRODUCT)),)
+ifneq ($(filter chronos_%,$(TARGET_PRODUCT)),)
 PRODUCT_MAKEFILES += $(LOCAL_DIR)/$(TARGET_PRODUCT).mk
 endif
